@@ -1,0 +1,68 @@
+//variablele maken kleuren
+$basiskleur: #a8e6cf;
+$eerstekleur: #dcedc1;
+$eerstesteun: #ffd3b6;
+$navikleur: #ffaaa5;
+$navi: #ff8b94;
+//afmetingen
+$menuhoogte: 40px;
+$aantallinkjes: 4;
+@import 'reset';
+// menu en de header
+header {
+    background-color: $navi;
+    nav {
+        background-color: $navikleur;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                border-bottom: 2px solid $navikleur*0.8;
+                a {
+                    text-decoration: none;
+                    display: block;
+                    padding: 0 20px;
+                    line-height: $menuhoogte;
+                    color: #fff;
+                }
+            }
+            li:hover {
+                background-color: $navikleur*1.3;
+            }
+        }
+    }
+    h1 {
+        margin: 0;
+        padding: 20px;
+        color: #fff;
+    }
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//linkjes 
+.linkjes {
+    background-color: $navi;
+    margin: 20px;
+    padding: 20px;
+    @include border-radius(15px);
+    h3 {
+        color: #fff;
+    }
+}
+//mediaquerie voor desktops
+@media screen and (min-width: 780px){
+@import 'desktop';
+    
+}

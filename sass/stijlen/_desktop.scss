@@ -1,0 +1,30 @@
+body{
+    background-color: $basiskleur*1.4;
+}
+header{
+    nav{
+        margin-bottom: 20px;
+        ul{
+            height: $menuhoogte;
+            li{
+                float: left;
+                width:100%/$aantallinkjes;
+                display: inline-block;
+                background-color: $navi;
+                border-bottom-color: $eerstesteun;
+                border-bottom: 5px;
+            }
+            li:hover{
+                border-bottom-color: $navikleur;
+            }
+        }
+    }
+}
+.linkjes{
+    @include border-radius(20px);
+}
+.hoofdInhoud, .linkjes{
+    box-sizing: border-box;
+    width: 45%;
+    display: inline-block;
+}
